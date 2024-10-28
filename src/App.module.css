@@ -1,0 +1,4 @@
+.BoardRow {
+    display: flex;
+    justify-content: center;
+}
