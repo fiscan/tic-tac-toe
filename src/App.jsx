@@ -6,6 +6,7 @@ import Restart from "./UI/Restart/Restart";
 function App() {
   const [xIsNext, setXIsNext] = useState(true)
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const tg = window.Telegram.WebApp;
   let stop = false
 
   function calculatingWinner(squares) {
@@ -63,6 +64,7 @@ function App() {
     
   }
 
+  tg.sendData(JSON.stringify(squares))
 
   return (
     <div className={cl.BoardRow}>
