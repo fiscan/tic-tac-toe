@@ -60,11 +60,10 @@ function App() {
       }
       setXIsNext(!xIsNext)
       setSquares(nextSquares)
+      tg.sendData(JSON.stringify(squares))
     }
     
   }
-
-  tg.sendData(JSON.stringify(squares))
 
   return (
     <div className={cl.BoardRow}>
